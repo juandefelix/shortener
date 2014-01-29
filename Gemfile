@@ -12,9 +12,9 @@ gem 'thin'
 gem 'debugger'
 gem 'activesupport'
 gem 'activerecord'
-
+gem 'bcrypt-ruby'
 gem 'rake'
-
+gem 'pry'
 gem 'shotgun'
 
 group :test do

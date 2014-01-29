@@ -1,0 +1,11 @@
+<div class="container">
+  <h3>"Welcome to Juan and Jacky's URL Shortener"</h3>
+  <a href = "/urls"> Create new short URL </a>
+  <ul>
+  <% Url.where(user_id: @user_id).order(:id).each do |u| %>
+
+    <li><a href="/<%= u.short_url%>"><%= u.short_url%></a> <%= u.long_url%> <%= u.counter%></li>
+    <% end %>
+  </ul>
+  <a href='/logout'>Logout</a>
+</div>

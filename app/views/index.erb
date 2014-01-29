@@ -1,9 +1,12 @@
 <div class="container">
-  <h3>"Welcome to Juan and Jacky's URL Shortener"</h3>
-  <a href = "/urls"> Create new short URL </a>
-  <ul>
-  <% Url.order(:id).each do |u| %>
-    <li><a href="/<%= u.short_url%>"><%= u.short_url%></a> <%= u.long_url%> <%= u.counter%></li>
-    <% end %>
-  </ul>
+  <h2>Juan and Jacky's Short URL</h2>
+  <p>Please Log In</p>
+   <form action="/login" method="post">
+    Email<input type="text" name="email"><br><br>
+    Password<input type="text" name="password"><br><br>
+    <input type="submit" value="Login">
+  </form>
+  <br>
+
+  <a href="/create_user">New User</a>
 </div>

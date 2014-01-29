@@ -4,8 +4,7 @@ require 'debugger'
 class Url < ActiveRecord::Base
   # Remember to create a migration!
   validate :valid_url
-  validates :long_url, uniqueness: true
-  validates :short_url, uniqueness: true
+  validates :user_id, presence: true
   belongs_to :user
 
   def valid_url

@@ -1,7 +1,7 @@
 require 'bcrypt'
 
 class User < ActiveRecord::Base
-  include bcrypt
+  include BCrypt
   # Remember to create a migration!
   def password
     @password ||= Password.new(password_hash)
@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
     self.password_hash = @password
   end
 
-  def login(email, password)
+  def self.login(email, password)
     user = User.find_by_email(email)
     return user if user.password == password
     nil
